@@ -30,7 +30,7 @@ section {
 .vehicle-icon-container {
   width: 60px;
   height: 40px;
-  margin: 20px;
+  margin-bottom: 30px;
 }
 
 .vehicle-icon-container>img {
@@ -38,25 +38,24 @@ section {
   max-height: 100%;
 }
 
-.container-1 {
+.container {
   background-color: #e28525;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  justify-content: space-between;
+  padding: 35px;
 }
 
-.container-2 {
+.container.sedans-container {
+  background-color: #e28525;
+}
+
+.container.suvs-container {
   background-color: #016972;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
 }
 
-.container-3 {
+.container.luxury-container {
   background-color: #00403f;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
 }
 
 .btn {
@@ -66,7 +65,7 @@ section {
 
 .btn-sedans {
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 30px;
   color: #e28525;
   border: #f2f2f2 solid 1px;
   border-radius: 20px;
@@ -74,7 +73,7 @@ section {
 
 .btn-suvs {
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 30px;
   color: #016972;
   border: #f2f2f2 solid 1px;
   border-radius: 20px;
@@ -82,7 +81,7 @@ section {
 
 .btn-luxury {
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 30px;
   color: #00403f;
   border: #f2f2f2 solid 1px;
   border-radius: 20px;
@@ -93,9 +92,65 @@ section {
   color: #ffffffbf;
   font-family: 'Big Shoulders Display';
   font-size: 30px;
-  padding: 20px;
+  margin-bottom: 30px;
 }
 
 .paragraph {
-  padding: 20px;
+  line-height: 25px;
+}
+
+/* Active State */
+.btn-sedans:hover,
+.btn-suvs:hover,
+.btn-luxury:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: #f2f2f2;
+  border: #f2f2f2 solid 2px;
+}
+
+/* Mobile */
+@media(max-width: 375px) {
+  section {
+    height: 100%;
+    margin: 50px 0px;
+  }
+
+  .main-container {
+    flex-direction: column;
+    width: 85%;
+    height: 100%;
+  }
+
+  .vehicle-icon-container,
+  .heading {
+    margin-bottom: 20px;
+  }
+
+  .paragraph {
+    margin-bottom: 20px;
+  }
+}
+
+/* iPad */
+@media(min-width: 376px) and (max-width: 1359px) {
+  section {
+    height: 100%;
+    margin: 50px 0px;
+  }
+
+  .main-container {
+    flex-direction: column;
+    width: 85%;
+    height: 100%;
+  }
+
+  .vehicle-icon-container,
+  .heading {
+    margin-bottom: 20px;
+  }
+
+  .paragraph {
+    margin-bottom: 20px;
+  }
 }
